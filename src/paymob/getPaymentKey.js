@@ -4,7 +4,7 @@ const getPaymentKey = async(authToken,orderId,email,amount,firstName,lastName)=>
     let req = {
       auth_token:authToken,
       amount_cents:amount,
-      expiration:1000,
+      expiration:300,
       order_id:orderId,
       billing_data:{
         apartment: "NA", 
@@ -22,7 +22,7 @@ const getPaymentKey = async(authToken,orderId,email,amount,firstName,lastName)=>
         state: "NA"
       },
       currency:"EGP",
-      integration_id:1700613
+      integration_id:21643 //change integration id
 
     };
     
