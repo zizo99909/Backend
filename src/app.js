@@ -44,7 +44,7 @@ app.post("/backend/payment", async (req, res) => {
   const client = await Client.find({ clientID: clientId });
    
   if (client.length===0) {
-    return res.status(404).send("NONE");
+    return res.send("NONE");
   }
   emailClient=client
   const amountt = client[0].amount * 100;
