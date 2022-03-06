@@ -2,7 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const HomePage = require('../models/homePage')
 
-router.get("/home", async (req, res) => {
+router.get("/backend/home", async (req, res) => {
     try {
       const fitness = await HomePage.findOne({title:'fitness'});
       const gym = await HomePage.findOne({title:'gym'});

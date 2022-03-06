@@ -2,7 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const Table= require('../models/table')
 
-router.get("/table", async (req, res) => {
+router.get("/backend/table", async (req, res) => {
     try {
      const table = await Table.find();
       

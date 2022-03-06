@@ -2,7 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const GymPage = require('../models/gymPage')
 
-router.get('/content/2',async(req,res)=>{
+router.get('/backend/content/2',async(req,res)=>{
     try {
 
         const page = await GymPage.find();

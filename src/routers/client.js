@@ -4,7 +4,7 @@ const router = new express.Router();
 
 
 //get all clients
-router.get("/clients", async (req, res) => {
+router.get("/backend/clients", async (req, res) => {
   try {
     const clients = await Client.find();
     res.send(clients);

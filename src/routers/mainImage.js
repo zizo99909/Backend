@@ -2,7 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const MainImage= require('../models/mainImage')
 
-router.get("/image", async (req, res) => {
+router.get("/backend/image", async (req, res) => {
     try {
      const image = await MainImage.find();
       

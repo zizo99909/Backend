@@ -17,6 +17,7 @@
     "@adminjs/express": "^4.0.1",
     "@adminjs/mongoose": "^2.0.0",
     "@sendgrid/mail": "^7.6.0",
+    "adminjs": "^5.7.3",
     "argon2": "^0.28.3",
     "cookie-parse": "^0.4.0",
     "cors": "^2.8.5",
@@ -28,7 +29,7 @@
     "node-fetch": "^2.6.7",
     "postman-request": "^2.88.1-postman.30",
     "react": "^16.13.1",
-    "sharp": "^0.29.3",
+    "tslib": "^2.3.1",
     "validator": "^13.7.0"
   }
 }

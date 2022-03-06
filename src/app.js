@@ -16,13 +16,16 @@ const cors = require("cors");
 const crypto =  require('crypto')
 const sendConfirmationEmail = require('./emails/payment')
 
-const app = express();
-
 const corsOptions = {
   origin: "http://localhost:3000",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
+const app = express();
+app.get("/backend/it",(req,res) => {
+	res.send("heheh");
+})
+
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(clientRouter);
@@ -34,10 +37,9 @@ app.use(mainImageRouter);
 app.use(tableRouter)
 app.use("/admin", adminRouter);
 app.use("/uploads", express.static("uploads"));
-
 var emailClient=[];
 //paymob
-app.post("/payment", async (req, res) => {
+app.post("/backend/payment", async (req, res) => {
   const clientId = req.body.clientID;
   const client = await Client.find({ clientID: clientId });
    
@@ -87,7 +89,7 @@ app.post("/payment", async (req, res) => {
 })*/
 
 
-app.get("/callback", async (req, res) => {
+app.get("/backend/callback", async (req, res) => {
   const ordered = req.query;
   const hmac = ordered.hmac;
  

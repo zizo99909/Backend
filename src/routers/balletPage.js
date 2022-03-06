@@ -2,7 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const BalletPage = require('../models/balletPage')
 
-router.get('/content/3',async(req,res)=>{
+router.get('/backend/content/3',async(req,res)=>{
     try {
 
         const page = await BalletPage.find();
