@@ -13,7 +13,7 @@ const getPaymentKey = async(authToken,orderId,email,amount,firstName,lastName)=>
         first_name: firstName, 
         street: "NA", 
         building: "NA", 
-        phone_number: "+86(8)9135210487", 
+        phone_number: "+201146979651", 
         shipping_method: "NA", 
         postal_code: "NA", 
         city: "NA", 
