@@ -1,6 +1,6 @@
 const fetch= require('node-fetch')
 
-const getPaymentKey = async(authToken,orderId,email,amount,firstName,lastName)=>{
+const getPaymentKey = async(authToken,orderId,email,amount,firstName,lastName,phoneNo)=>{
     let req = {
       auth_token:authToken,
       amount_cents:amount,
@@ -13,7 +13,7 @@ const getPaymentKey = async(authToken,orderId,email,amount,firstName,lastName)=>
         first_name: firstName, 
         street: "NA", 
         building: "NA", 
-        phone_number: "+201146979651", 
+        phone_number: phoneNo, 
         shipping_method: "NA", 
         postal_code: "NA", 
         city: "NA", 
