@@ -60,7 +60,8 @@ app.post("/backend/payment", async (req, res) => {
           client[0].email,
           amountt,
           client[0].firstName,
-          client[0].lastName
+          client[0].lastName,
+          client[0].phoneNumber
         );
         paymentToken
           .then(function (result3) {
