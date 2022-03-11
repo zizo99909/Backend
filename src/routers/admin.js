@@ -627,17 +627,20 @@ const adminJs = new AdminJS({
         },
         actions:{
           new:{
-            isAccessible: ({ currentAdmin }) => currentAdmin && currentAdmin.email === 'info@slimnasticsstudio.com',
+            isAccessible: ({ currentAdmin }) => currentAdmin && currentAdmin.email === 'dev@slimnasticsstudio.com',
+            isAccessible: ({ currentAdmin }) => currentAdmin && currentAdmin.email === 'passant@slimnasticsstudio.com',
            after: passwordAfterHook,
            before:passwordBeforeHook
           },
           edit:{
-            isAccessible: ({ currentAdmin }) => currentAdmin && currentAdmin.email === 'info@slimnasticsstudio.com',
+            isAccessible: ({ currentAdmin }) => currentAdmin && currentAdmin.email === 'dev@slimnasticsstudio.com',
+            isAccessible: ({ currentAdmin }) => currentAdmin && currentAdmin.email === 'passant@slimnasticsstudio.com',
             after: passwordAfterHook,
             before:passwordBeforeHook
           },
           delete:{
-            isAccessible: ({ currentAdmin }) => currentAdmin && currentAdmin.email === 'info@slimnasticsstudio.com',
+            isAccessible: ({ currentAdmin }) => currentAdmin && currentAdmin.email === 'dev@slimnasticsstudio.com',
+            isAccessible: ({ currentAdmin }) => currentAdmin && currentAdmin.email === 'passant@slimnasticsstudio.com',
           }
         }
       },
