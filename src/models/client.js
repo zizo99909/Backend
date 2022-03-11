@@ -24,6 +24,15 @@ const clientSchema = new mongoose.Schema({
       }
     },
   },
+   phoneNumber:{
+   type:String,
+   validate(value) {
+    if (!validator.isMobilePhone(value)) {
+      throw new Error("Number is invalid");
+    }
+  },
+   required:true
+  },
   amount: {
     type: Number,
   },
